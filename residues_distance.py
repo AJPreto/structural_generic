@@ -9,6 +9,12 @@ Euclidean distance between alpha carbons
 import sys
 import numpy as np
 
+__author__ = "A.J. Preto"
+__email__ = "martinsgomes.jose@gmail.com"
+__group__ = "Data-Driven Molecular Design"
+__group_leader__ = "Irina S. Moreira"
+__project__ = "CRADDLE"
+
 def process_pdb(input_file):
 
     opened_file = open(input_file, "r").readlines()

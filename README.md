@@ -18,4 +18,7 @@ Repository for .PDB files analysis.
 - Input a ".pdb" file to retrieve LGScore and MaxSub evaluation. Secondary structure submission is possible.
 
 **Haddock**:
-- Input a ".pdb" dimer file to perform interface refinement.
+- Input a ".pdb" dimer file to perform interface refinement. Confirm chromedriver version prior to usage.
+
+**Correct animo acid**:
+- Input a ".pdb" file to correct an amino acid name on the whole file. Can also be used on all the files in the folder.

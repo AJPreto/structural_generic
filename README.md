@@ -22,3 +22,6 @@ Repository for .PDB files analysis.
 
 **Correct animo acid**:
 - Input a ".pdb" file to correct an amino acid name on the whole file. Can also be used on all the files in the folder.
+
+**Center coordinates**:
+- Input a ".pdb" file to attain an output with the coordinates geometrically centered.

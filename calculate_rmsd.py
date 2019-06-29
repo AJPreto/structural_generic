@@ -23,6 +23,9 @@ __group_leader__ = "Irina S. Moreira"
 
 def perform_alignment(template, test_pdb, output_file = "output_rmsd.csv"):
 
+    """
+    Perform and alignment using PyMOL's python API
+    """
     opened_file = open(output_file,"a")
     cmd.load(template,"template")
     cmd.load(test_pdb,"other")
@@ -33,9 +36,12 @@ def perform_alignment(template, test_pdb, output_file = "output_rmsd.csv"):
 
 def perform_multiple_alignments(avoid):
 
+    """
+    Deploy the alignment on all the .pdb files in the folder
+    """
     for files in os.listdir(os.getcwd()):
         if files.endswith(".pdb") and (files != avoid):
             perform_alignment(avoid, files) 
 
-reference_name = "2rhk_A.pdb"
-perform_multiple_alignments(reference_name)
+#reference_name = "2rhk_A.pdb"
+#perform_multiple_alignments(reference_name)

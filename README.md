@@ -25,3 +25,6 @@ Repository for .PDB files analysis.
 
 **Center coordinates**:
 - Input a ".pdb" file to attain an output with the coordinates geometrically centered.
+
+**Interface class**:
+- input a ".pdb" file to attain a interfacial classification of a dimer chain

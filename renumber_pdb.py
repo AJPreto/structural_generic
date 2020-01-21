@@ -17,23 +17,26 @@ def renumber_pdb(input_path, replace_file = False, termination = ".pdb"):
 	"""
 	opened_pdb = open(input_path, "r").readlines()
 	output_name = input_path.split(".")[0] + "_temp" + termination
-	started = False
+	started, chain_start = False, False
 	with open(output_name, "w") as write_file:
 		for row in opened_pdb:
 			row = row.replace("\n","")
 			if row[0:4] == "ATOM":
+				if chain_start == False: current_chain, chain_start = row[21], True
+				if row[21] != current_chain: count, current_chain = 1, row[21]
 				if started == False:
 					count = 1
-					holder_res = int(row[22:26])
+					holder_res = str(row[23:27]).replace(" ","")
 					current_res = count
 					started = True
-				if int(row[22:26]) != holder_res:
-					holder_res = int(row[22:26])
+				if str(row[23:27]).replace(" ","") != holder_res:
+					holder_res = str(row[23:27]).replace(" ","")
 					count += 1
 					current_res = count
 				proper_row = row[0:22] + str(current_res).rjust(4) + row[26:] + "\n"
-			else:
-				proper_row = row + "\n"
+				print(row)
+				print(proper_row)
+			else: proper_row = row + "\n"
 			write_file.write(proper_row)
 	if replace_file == True:
 		import os
@@ -43,4 +46,4 @@ def renumber_pdb(input_path, replace_file = False, termination = ".pdb"):
 """
 Example of how to use below
 """
-#renumber_pdb("pdb1eaw.ent", termination = ".ent", replace_file = True)
+#renumber_pdb("1e4w.pdb", termination = ".pdb")

@@ -26,7 +26,7 @@ def renumber_pdb(input_path, replace_file = False, termination = ".pdb"):
 					count = 1
 					holder_res = int(row[22:26])
 					current_res = count
-					start = True
+					started = True
 				if int(row[22:26]) != holder_res:
 					holder_res = int(row[22:26])
 					count += 1

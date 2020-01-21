@@ -81,4 +81,4 @@ Example of run
 processed_file = list(process_pdb("D1R-Gi1.pdb"))
 all_coordinates = execute_on_file(processed_file)
 usable_class = calculate_inter_chain(all_coordinates)
-print(usable_ckass)
+print(usable_class)

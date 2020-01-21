@@ -28,3 +28,6 @@ Repository for .PDB files analysis.
 
 **Interface class**:
 - input a ".pdb" file to attain a interfacial classification of a dimer chain
+
+**Renumber pdb**:
+- input a ".pdb" file to attain the renumbered (from 1) ".pdb file"

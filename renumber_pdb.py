@@ -34,8 +34,6 @@ def renumber_pdb(input_path, replace_file = False, termination = ".pdb"):
 					count += 1
 					current_res = count
 				proper_row = row[0:22] + str(current_res).rjust(4) + row[26:] + "\n"
-				print(row)
-				print(proper_row)
 			else: proper_row = row + "\n"
 			write_file.write(proper_row)
 	if replace_file == True:

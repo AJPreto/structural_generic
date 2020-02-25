@@ -27,7 +27,11 @@ Repository for .PDB files analysis.
 - Input a ".pdb" file to attain an output with the coordinates geometrically centered.
 
 **Interface class**:
-- input a ".pdb" file to attain a interfacial classification of a dimer chain
+- input a ".pdb" file to attain a interfacial classification of a dimer chain.
 
 **Renumber pdb**:
-- input a ".pdb" file to attain the renumbered (from 1) ".pdb file"
+- input a ".pdb" file to attain the renumbered (from 1) ".pdb file".
+
+**Query Uniprot and PDB**
+- input a csv table and find UniProt and PDBids.
+- retrieve protein structure and sequence.

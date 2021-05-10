@@ -20,7 +20,7 @@ Repository for .PDB files analysis.
 **Haddock**:
 - Input a ".pdb" dimer file to perform interface refinement. Confirm chromedriver version prior to usage.
 
-**Correct animo acid**:
+**Correct amino acid**:
 - Input a ".pdb" file to correct an amino acid name on the whole file. Can also be used on all the files in the folder.
 
 **Center coordinates**:
@@ -35,3 +35,6 @@ Repository for .PDB files analysis.
 **Query Uniprot and PDB**
 - input a csv table and find UniProt and PDBids.
 - retrieve protein structure and sequence.
+
+**Rename chains**:
+- input a ".pdb" file and the chain names to rename chains or input chains in absence.

@@ -38,3 +38,6 @@ Repository for .PDB files analysis.
 
 **Rename chains**:
 - input a ".pdb" file and the chain names to rename chains or input chains in absence.
+
+**3Dcons**:
+- input a PDB code and fetch the calculated PSSM results.

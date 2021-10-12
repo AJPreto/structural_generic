@@ -84,9 +84,9 @@ def scrape_3dcons(input_entry, single_chain_mode = False,
     Access 3dcons to retrieve the pssm format
     """
     import requests
-    if chain_mode == False:
+    if single_chain_mode == False:
         query_url = DCONS_URL + SYSTEM_SEP + input_entry
-    elif chain_mode == True:
+    elif single_chain_mode == True:
         query_url = DCONS_URL + SYSTEM_SEP + input_entry.split(INTERMEDIATE_SEP)[0] + \
                         SYSTEM_SEP + input_entry.split(INTERMEDIATE_SEP)[1]
     current_response = requests.get(query_url)
@@ -94,10 +94,10 @@ def scrape_3dcons(input_entry, single_chain_mode = False,
     if save_mode == True:
         save_json(current_response, input_entry, \
                     download_loc = download_loc)
-    if chain_mode == True:
+    if single_chain_mode == True:
         results = process_json(current_response.json(), multiple_chains = False, \
                         iter_num = iter_num)
-    elif chain_mode == False:
+    elif single_chain_mode == False:
         results = process_json(current_response.json(), multiple_chains = True, \
                         iter_num = iter_num)
     return results

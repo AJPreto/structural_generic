@@ -108,12 +108,12 @@ def scrape_3dcons(input_entry, single_chain_mode = False,
 ##Output a dictionary with the chains as keys and the pandas dataframes as values
 current_pdb = "3sn6"
 current_table = scrape_3dcons(current_pdb, \
-                single_chain_mode = True)
+                single_chain_mode = False)
 
 #Example 2 - Retrieve the PSSM results for a specific PDB chain
 ##Outputs a single pandas dataframe
 current_pdb_chain = "3sn6_A"
 current_table = scrape_3dcons(current_pdb_chain, \
-                single_chain_mode = False)
+                single_chain_mode = True)
 """
 
